@@ -1,5 +1,10 @@
 server:
   port: 8081
+
 spring:
   application:
     name: locations
+
+service:
+  trucks:
+    uri: http://localhost:8080/trucks/
