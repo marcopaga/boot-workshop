@@ -1,0 +1,124 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring Boot Data REST Workshop",
+		"_postman_id": "87b959a0-7259-b128-766d-7f03fd51fe57",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/actuator",
+			"request": {
+				"url": "http://localhost:8080/actuator",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/health",
+			"request": {
+				"url": "http://localhost:8080/health",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/profile/trucks",
+			"request": {
+				"url": "http://localhost:8080/profile/trucks",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Truck anlegen",
+			"request": {
+				"url": "http://localhost:8080/trucks/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"licensePlate\" : \"ME-TC 1234\",\n\t\"location\" : \"Erkrath\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Alle Trucks anzeigen",
+			"request": {
+				"url": "http://localhost:8080/trucks",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1,\n        \"licensePlate\": \"ME TC 1234\",\n        \"location\": \"Erkrath\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Alle Trucks anzeigen (homemade)",
+			"request": {
+				"url": "http://localhost:8080/homemade/truck",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1,\n        \"licensePlate\": \"ME TC 1234\",\n        \"location\": \"Erkrath\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Truck anlegen (homemade)",
+			"request": {
+				"url": "http://localhost:8080/homemade/truck",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"licensePlate\": \"SG CC 12\",\n    \"location\": \"Solingen\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

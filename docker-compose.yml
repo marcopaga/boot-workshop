@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  database:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_USER=spring-user
+      - MYSQL_PASSWORD=spring-password
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=trucks
+  trucks:
+    build: ./trucks
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://database:3306/trucks
+      - SPRING_DATASOURCE_USERNAME=spring-user
+      - SPRING_DATASOURCE_PASSWORD=spring-password
+    depends_on:
+      - database
+    

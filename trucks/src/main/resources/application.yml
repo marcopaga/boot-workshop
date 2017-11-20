@@ -1,0 +1,10 @@
+server:
+  port: 8080
+management:
+  security:
+    enabled: false
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
