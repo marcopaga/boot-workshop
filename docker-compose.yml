@@ -9,10 +9,14 @@ services:
       - MYSQL_PASSWORD=spring-password
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=trucks
-  trucks:
-    build: ./trucks
+  locations:
+    build: ./locations
+    depends_on:
+      - trucks
     ports:
       - "8080:8080"
+  trucks:
+    build: ./trucks
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://database:3306/trucks
       - SPRING_DATASOURCE_USERNAME=spring-user

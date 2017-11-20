@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>workshop</name>
+	<name>locations</name>
 	<description>This project was started using start.spting.io with the following dependencies sleected: Rest Repositories, DevTools, H2×</description>
 
 	<parent>
