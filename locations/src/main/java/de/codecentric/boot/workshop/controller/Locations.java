@@ -1,5 +1,6 @@
 package de.codecentric.boot.workshop.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,8 @@ import java.util.Arrays;
 @RequestMapping("/locations")
 public class Locations {
 
-    private RestTemplate restTemplate = new RestTemplate();
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Value("${service.trucks.uri}")
     private String trucksServiceUri;
