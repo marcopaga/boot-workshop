@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
+import java.util.Arrays;
 
 @SpringBootApplication
 public class TrucksApplication {
@@ -20,6 +21,13 @@ public class TrucksApplication {
 
 	@PostConstruct
 	public void load(){
-		truckRepository.save(new Truck("ME TC 1234", "Erkrath"));
+		truckRepository.save(Arrays.asList(
+				new Truck("ME TC 1234", "Erkrath"),
+				new Truck("ME TC 1235", "Solingen"),
+                new Truck("ME TC 1236", "Solingen"),
+                new Truck("ME TC 1237", "Solingen"),
+                new Truck("ME TC 1238", "Solingen"),
+                new Truck("ME TC 1239", "Solingen")
+		));
 	}
 }
