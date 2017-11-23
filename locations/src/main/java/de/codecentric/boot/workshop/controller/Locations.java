@@ -57,8 +57,8 @@ public class Locations {
         final Location location = new Location();
         location.setName(name);
 
-        final Link solingenLink = linkTo(methodOn(Locations.class).location(name)).withRel("trucks");
-        return new Resource<>(location, solingenLink);
+        final Link trucksLink = linkTo(methodOn(Locations.class).location(name)).withRel("trucks");
+        return new Resource<>(location, trucksLink);
     }
 
     private static final class PagedTrucksType extends TypeReferences.PagedResourcesType<Resource<Truck>> {
