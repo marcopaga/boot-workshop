@@ -14,7 +14,9 @@ services:
     depends_on:
       - trucks
     ports:
-      - "8080:8080"
+      - "8080:8081"
+    environment:
+      - SERVICE_TRUCKS_URI=http://trucks:8080/trucks/
   trucks:
     build: ./trucks
     environment:
